@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>015 className修改样式</title>
+    <style>
+        .first {
+            background-color: pink;
+            width: 300px;
+            height: 200px;
+            
+        }
+
+        .change {
+            background-color: purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">文本</div>
+</body>
+<script>
+    var test = document.querySelector('div');
+    test.onclick = function() {
+        this.className = 'change';
+        //this.className = 'first change';用多类名
+    }
+</script>
+</html>

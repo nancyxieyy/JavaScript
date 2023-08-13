@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易计算器</title>
+    <script>
+        var choice = prompt(
+        '欢迎使用简易计算器:' + '\n' + 
+        '1.加法运算;' + '\n' +
+        '2.减法运算;' + '\n' +
+        '3.乘法运算;' + '\n' +
+        '4.除法运算;' + '\n' +
+        '5.退出;' + '\n' +
+        '请输入您的选项');
+
+        var num1 = prompt('请输入第一个数字:') - 0;
+        
+        var num2 = prompt('请输入第二个数字') - 0;
+
+        if(choice == 1) {
+            var num = num1 + num2;
+            alert('结果为:' + num);
+        } else if (choice == 2) {
+            var num = num1 - num2;
+            alert('结果为:' + num);
+        } else if (choice == 3) {
+            var num = num1 * num2;
+            alert('结果为:' + num);
+        } else if (choice == 4) {
+            var num = num1 / num2;
+            alert('结果为:' + num);
+        } else if (choice == 5) {
+            alert('退出');
+        } else {
+            alert('输入不正确!');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>023</title>
+    <style>
+        a {
+        text-decoration: none;
+        }
+
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align:center;
+        }
+
+        td,
+        th {
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </tbody>
+</body>
+<script>
+    //1. 准备好学生的数据
+    var datas = [{
+        name: 'xxx',
+        subject: 'JS',
+        score: 100    
+    }, {
+        name: 'aaa',
+        subject: 'JS',
+        score: 100    
+    },{
+        name: 'bbb',
+        subject: 'JS',
+        score: 100    
+    },{
+        name: 'ccc',
+        subject: 'JS',
+        score: 100    
+    }];
+    //2. 往tbody里创建行
+    var tbody = document.querySelector('tbody');
+    for(var i = 0; i < datas.length; i++) {
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+        //创建td的个数
+        for(var k in datas[i]) {//k是属性值
+            //创建单元格
+            var td = document.createElement('td');
+            //放入内容
+            td.innerHTML = datas[i][k];
+            tr.appendChild(td);
+        }
+        //操作的单元格另外创建
+        var td = document.createElement('td');
+        td.innerHTML = '<a href="javascript:;">删除</a>';
+        tr.appendChild(td);
+    }
+
+    //添加删除操作
+    var as = document.querySelectorAll('a');
+    for(var i = 0; i < as.length; i++) {
+        as[i].onclick = function() {
+            tbody.removeChild(this.parentNode.parentNode);
+            /** tbody>tr>td>a
+                要删除tr，对this(as[i])来说，是父亲的父亲
+                对tbody来说tr是child **/
+        }
+    }
+</script>
+</html>

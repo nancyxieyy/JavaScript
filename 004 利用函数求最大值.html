@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用函数求最大值</title>
+    <script>
+        function getMax() {
+            var maxNum = arguments[0];
+            for(var i = 0; i < arguments.length; i++) {
+                if(maxNum < arguments[i]) {
+                    maxNum = arguments[i];
+                }
+            }
+            return maxNum;
+        }
+        console.log(getMax(1, 2, 3));
+        console.log(getMax(1, 2, 3, 4 ,5));
+        console.log(getMax(11, 2, 34, 444, 5, 100));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

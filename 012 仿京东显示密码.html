@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>012 仿京东显示密码</title>
+</head>
+<body>
+    <input type="text">
+    <br>
+    <input type="password" id="password">
+    <button>显示密码</button>
+</body>
+<script>
+    var btn = document.querySelector('button');
+    var key = document.getElementById('password');
+    var flag = 0;
+    btn.onclick = function() {
+        if(flag == 0) {
+            key.type = 'text';
+            this.innerHTML = '隐藏密码';
+            flag = 1;
+        }
+        else {
+            key.type = 'password';
+            this.innerHTML = '显示密码';
+            flag = 0;
+        }
+    }
+</script>
+</html>
