@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <video src="../../../../运动/1h拉伸局部到有氧.mp4" muted></video>
+    <script>
+        // 直接获取视频，得到的就是jQuery对象
+        $('video');
+        // 使用原生js获取过来DOM对象
+        var myvideo = document.querySelector('video');
+        // jQuery转DOM
+        $('video')[0].play()
+        // $('video').get(0).play()
+    </script>
+</body>
+</html>
